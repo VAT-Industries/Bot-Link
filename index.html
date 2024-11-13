@@ -162,8 +162,8 @@
           </label>
         
           <img id="MesPrev" style="align-self: center; max-height: 600px; max-width: 1200px;"  src="./Bot message preveiw.png"/>
-          <input disabled id="UserPrevText" class="user" style="color: white; border-radius: 25px; background-color: #282c34; border-color: #282c34; bottom: 95px; left: 389px; position: relative; width: 500px;"/>
-          <input disabled id="BotPrevText" class="bot" style="color: white; border-radius: 25px; background-color: #282c34; border-color: #282c34; bottom: 55px; left: 389px; position: relative;  width: 500px;"/>
+          <input oninput="edit()" disabled id="UserPrevText" class="user" style="color: white; border-radius: 25px; background-color: #282c34; border-color: #282c34; bottom: 95px; left: 389px; position: relative; width: 500px;"/>
+          <input oninput="edit()" disabled id="BotPrevText" class="bot" style="color: white; border-radius: 25px; background-color: #282c34; border-color: #282c34; bottom: 55px; left: 389px; position: relative;  width: 500px;"/>
           <button onclick="compileCode()">Compile Code</button>
         </div>
       </body>
@@ -301,7 +301,6 @@ client.on('ready', async () => {
           document.getElementById("RepType2").disabled = false;
           document.getElementById("replyInput2").disabled = false;
           document.getElementById("comInput2").disabled = false;
-          document.getElementById("reply2").disabled = false;
         }
         document.getElementById("comInput2").placeholder = Comtype2;
       });
