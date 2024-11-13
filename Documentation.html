@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+  <div className="App">
+    <header className="App-header" style="text-align: center;
+    background-color: #282c34;
+    min-height: 97.5vh;
+    display: flex;flex-direction: column;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;">
+      <img src="bot-link Logo.png" className="App-logo" alt="logo" style="height: 40vmin;
+    width: 45vmin;
+    pointer-events: none;
+    align-self: center;"
+    />
+    <p>
+        Welcome to Bot-link
+    </p>
+    <text>
+        Documentation
+    </text>
+    <a href="./Bot-Link.html">
+        <button>Go Back to Bot-Link</button>
+    </a>
+    </header>
+    <div style="text-align: center;
+    background-color: #282c34;
+    font-size: calc(10px + 2vmin);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;">
+    <a href="#Ch1"><button>Introduction</button></a>
+    <a href="#Ch2"><button>Commands</button></a>
+    <a href="#Ch3"><button>Replys</button></a>
+    <a href="#Ch5"><button>Creating the Bot</button></a>
+    <a href="#Ch6"><button>any errors?</button></a>
+    <a href="#Ch7"><button>End</button></a>
+    </div>
+    <div style="text-align: center;
+    background-color: #282c34;
+    display: flex;flex-direction: column;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;"
+    >
+      <text style="align-self: flex-start;" id="Ch1">Introduction to Bot-Link</text>
+      <textarea rows="10" cols="999" readonly style="
+        background-color: #282c34;
+        display: flex;flex-direction: column;
+        justify-content: center;
+        font-size: calc(7px + 1.5vmin);
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color: white;">
+            Introduction:
+            So I see you want to learn a bit about Bot-Link
+            well no to worry I will teach you how to use Bot-Link to make yourself a discord bot
+        </textarea>
+        <text style="align-self: flex-start;" id="Ch2">the Basics of Bot-Link:Commands</text>
+        <textarea rows="30" cols="999" readonly style="
+        background-color: #282c34;
+        display: flex;flex-direction: column;
+        justify-content: center;
+        font-size: calc(7px + 1.5vmin);
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color: white;">
+            Commands:
+            commands are the basic triggers for your bot they tell your bot what to look out for
+            they can be onMessageSend or onNewUserJoin these triggers make your bot respond to things
+    
+            onMessageSend:
+            this is very self-explanatory it checks if a specific message is sent no matter if its in all caps or not its very vague.
+            this can range from a Hello to 123.
+            It can be any message.
+
+            onAnyMessageSend:
+            this is realy self-explanitory but it has a quirk that I must tell you about
+            it makes the bot respond to any message sent as long as the message is not from another bot
+            its because if it responds to bots it may cause lag
+            just remember that this makes it respond to every message and may get annoying you have been warned
+    
+            onCommand:
+            this is less self-explanatory and may confuse you a bit but its very simple when you understand.
+            its not for slash commands.
+            it is basicly like on onMessageSend but just more specififc witch means that the command has to be said exactly as its written.
+    
+            onNewUserJoin:
+            it triggers when a new user joins your server.
+            you can do many things with this commnd for starters making a welcome bot or you can make it ban people as soon as they join.
+        </textarea>
+        <text style="align-self: flex-start;" id="Ch3">the Basics of Bot-Link:Replys</text>
+        <textarea rows="40" cols="999" readonly style="
+        background-color: #282c34;
+        display: flex;flex-direction: column;
+        justify-content: center;
+        font-size: calc(7px + 1.5vmin);
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color: white;">
+            Replys:
+            Replys are what your bot does if a command is triggered if you dont know about commands go to the section above and READ IT.
+            Replys can be replying to a message or banning you the skys the limit or atleast the amount of options are.
+
+            reply:
+            its the deafult setting
+            it makes the bot reply to the message that is sent
+            Do not use reply with the command onNewUserJoin it does not work and will give you an error
+
+            sendMessage:
+            this is very self-explanatory it makes the bot send a message
+
+            sendDirectMessage:
+            this is not as self-explanatory as the send message.
+            it makes the bot send a direct message witch means the message is not sent in the server the bot is in but directly to the user.
+            
+            mentionSomebody:
+            it makes the bot to mention somebody using their userName.
+            yeah this is also experimental.
+
+            mentionEveryone:
+            it makes the bot mention everyone
+            its that simple.
+
+            giveRoleUsingId:
+            this makes the bot give a role to people using its Id.
+            it only works with the id NOT WITH THE ROLE NAME.
+
+            
+        </textarea>
+        <text style="align-self: flex-start;" id="Ch5">the Basics of Bot-Link:Creating a Bot</text>
+        <textarea rows="25" cols="999" readonly style="
+        background-color: #282c34;
+        display: flex;flex-direction: column;
+        justify-content: center;
+        font-size: calc(7px + 1.5vmin);
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color: white;">
+        Introduction:
+        Ok finaly creating the bot woooooooooohooooooooo.
+        
+        What You Need To Install:
+        ok so first you would need to download visual studio code ok Visula Studio Code not visual studio VISUAL STUDIO CODE
+        next you need to install nodes.js
+        
+        Packages You Need To Install:
+        then you need to write in the terminal (npm i discord.js)
+        the you need to write in the terminal (npm init)
+        only change the 
+        .name
+        .description
+        .author
+        if you want to skip this part use the command (npm init -y)
+
+        you can find this basic process if you look at any discord bot tutorial
+
+        Scripting:
+        finaly you will create a .js by typing (Index.js) the file could be named any name you want you just have to add .js at the end
+        then you paste the code you got from bot-Link in and thats it
+        </textarea>
+        <text style="align-self: flex-start;" id="Ch6">the Basics of Bot-Link:Any errors</text>
+        <textarea rows="20" cols="999" readonly style="
+        background-color: #282c34;
+        display: flex;flex-direction: column;
+        justify-content: center;
+        font-size: calc(7px + 1.5vmin);
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color: white;">
+        We appologize for any errors that may be in bot-Link
+        if there are any errors with your bot please inform us at the V.A.T industries discord server
+        thank you
+        </textarea>
+        <text style="align-self: flex-start;" id="Ch7">the Basics of Bot-Link:The End</text>
+        <textarea rows="20" cols="999" readonly style="
+        background-color: #282c34;
+        display: flex;flex-direction: column;
+        justify-content: center;
+        font-size: calc(7px + 1.5vmin);
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color: white;">
+        End:
+        Ok so you made it to the end either you read throught the whole thing or you just scrolled to the bottom out of curiosity
+        so Im going to tell you somethings that I feel your should know
+        
+        Updates:
+        Yes Bot-Link will be updated once and a while to make it better and hopefully make it the best discord bot making website there is wish me luck
+        I will also update the documentation but I will try to keep it the same
+
+        Developer Note:
+        I hope you enjoyed and benefited from bot-link because it took me sometime to learn how some of the code for discord.js works
+        I also hope bot-link can help you learn how to make a discord bot
+
+        If It Doesnt Work:
+        if it doesnt work feel free to go to the V.A.T industries discord server and complain to us about your bot not working
+        if you cant make the bot you want we also provide custom bot making services there
+        </textarea>
+        <a href="https://discord.gg/Spk7cfM2Jv"><button>join V.A.T industries server</button></a>
+    </div>
+  </div>
+</html>

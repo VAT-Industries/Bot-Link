@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+  <div className="App">
+    <header class="App-header" style="text-align: center;
+    background-color: #282c34;
+    min-height: 97.5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: calc(10px + 2vmin);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;">
+      <img src="bot-link Logo.png" class="logo" alt="logo" style="
+    pointer-events: none;
+    height: 40vmin;
+    width: 45vmin;"
+    />
+
+    <link href="./Bot-Link.css" type="text/css">
+    <style>
+      .bot{
+        opacity: 1;
+      }
+
+      .bot:disabled{
+        opacity: 0;
+      }
+
+      .user{
+        opacity: 1;
+      }
+
+      .user:disabled{
+        opacity: 0;
+      }
+
+      .logo {
+        animation-name: logo;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+      }
+
+      @keyframes logo {
+        0% {transform: rotate(0deg); color: #0a7d3c;}
+        100% {transform: rotate(360deg); color: #0eb958;}
+      }
+
+      
+    </style>
+    <script type="text/javascript" src='BotBackEnd.js'></script>
+      <p>
+        Welcome to Bot-link
+      </p>
+      <p>version 1.0</p>
+      <p>
+        Here you can Make a Discord Bot without coding experience
+      </p>
+      <a href ="./Documentation.html">
+        <button>Go to the Documentation</button>
+      </a>
+
+     </header>
+
+      <body style="text-align: center;
+      background-color: #282c34;
+      min-height: 97.5vh;
+      display:flex; flex-direction:column; justify-content:center;
+      font-size: calc(10px + 2vmin);
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      color: white;">
+        <div style="text-align: center;
+        background-color: #282c34;
+        display:flex; flex-direction:column; justify-content:center;
+        font-size: calc(10px + 2vmin);
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color: white;">
+          <p id="KeyDisplay">
+            Bot token: 
+          </p>
+          <input placeholder='put Bot token here' id="Keyinput" style="width: fit-content;align-self: center;" onchange="editKey()"/>
+    
+          <button style="width: fit-content;align-self: center;" onclick="editKey()">input Bot token</button>
+    
+          <form id="Addinput">
+            <label>
+              <select
+                onchange="setCommandtype()"
+                id="CommandType"
+              >
+                <option value="">Command line not in use</option>
+                <option value="messge for bot to reply to">onMessageSend</option>
+                <option value="bot replys to any message">onAnyMessageSend</option>
+                <option value="command for bot to reply to">onCommand</option>
+                <option value="slash command">onSlashCommand: Experimental</option>
+                <option value="channel Id">onNewUserJoin</option>
+              </select>
+            </label>
+    
+            <input placeholder="" id="comInput" disabled onchange="editCom()"/>
+    
+            <label>
+              <select
+                id="RepType"
+                onchange="setReplytype()"
+                disabled
+              >
+                <option value="bots reply">reply</option>
+                <option value="bots message">sendMessage</option>
+                <option value="bots Dm">sendDirectMessage</option>
+                <option value="message with mention">mentionEveryone</option>
+                <option value="Role Id">giveRoleUsingId</option>
+              </select>
+            </label>
+    
+            <input disabled placeholder="bots reply" id="replyInput" onchange="editreply()"/>
+    
+          </form>
+    
+          <form id="Addinput2">
+            <label>
+              <select
+                onchange="setCommandtype()"
+                id="CommandType2"
+              >
+                <option value="">Command line2 not in use</option>
+                <option value="messge for bot to reply to">onMessageSend</option>
+                <option value="bot replys to any message">onAnyMessageSend</option>
+                <option value="command for bot to reply to">onCommand</option>
+                <option value="slash command">onSlashCommand: Experimental</option>
+                <option value="channel Id">onNewUserJoin</option>
+                <option value="Else">Else</option>
+              </select>
+            </label>
+    
+            <input placeholder="" id="comInput2" disabled onchange="editCom()"/>
+    
+            <label>
+              <select
+                id="RepType2"
+                onchange="setReplytype()"
+                disabled
+              >
+                <option value="bots reply">reply</option>
+                <option value="bots message">sendMessage</option>
+                <option value="bots Dm">sendDirectMessage</option>
+                <option value="message with mention">mentionEveryone</option>
+                <option value="Role Id">giveRoleUsingId</option>
+              </select>
+            </label>
+    
+            <input disabled placeholder="bots reply" id="replyInput2" onchange="editreply()"/>
+    
+          </form>
+          <label>
+            <select
+            id="PrevSelect"
+            style="align-content: center;"
+            >
+              <option value="Prev1">Preveiw Command1</option>
+              <option value="Prev2">Preveiw Command2</option>
+            </select>
+          </label>
+        
+          <img id="MesPrev" style="align-self: center; max-height: 600px; max-width: 1200px;"  src="./Bot message preveiw.png"/>
+          <input disabled id="UserPrevText" class="user" style="color: white; border-radius: 25px; background-color: #282c34; border-color: #282c34; bottom: 95px; left: 389px; position: relative; width: 500px;"/>
+          <input disabled id="BotPrevText" class="bot" style="color: white; border-radius: 25px; background-color: #282c34; border-color: #282c34; bottom: 55px; left: 389px; position: relative;  width: 500px;"/>
+          <button onclick="compileCode()">Compile Code</button>
+        </div>
+      </body>
+
+    
+    <header className="App-header" style="
+    min-width: auto;
+    text-align: left;
+    background-color: #1c1e24;
+    min-height: 97.5vh;
+    display: flex;flex-direction: column;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;">
+    <div style="
+    text-align: left;
+    background-color: #1c1e24;
+    min-height: 97.5vh;
+    display: flex;flex-direction: column;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;">
+        <textarea id="Code" style="height: 500px; color: white; background-color: #282c34;" spellcheck="false">
+const token = ("")
+
+const Discord = require("discord.js");
+
+const GatewayIntentBits = Discord.GatewayIntentBits
+
+const client = new Discord.Client({
+  intents: [
+    GatewayIntentBits.Guilds,
+    GatewayIntentBits.GuildMessages,
+    GatewayIntentBits.GuildMembers,
+    GatewayIntentBits.DirectMessages,
+    GatewayIntentBits.MessageContent,
+  ],
+});
+
+client.on('messageCreate', async (message) => {
+  if(message.content.toLowerCase() === ""){
+    message.reply('')
+  }
+})
+
+client.login(token);
+
+client.on('ready', async () => {
+  console.log('Bot-Link Bot Activated')
+});
+        </textarea>
+        <button onclick="copyCode()">Copy Code to ClipBoard</button>
+    </div>
+    <header>
+    <script>
+
+      //<option value="Embeded Label">sendEmbeded</option>
+      //<option value="kick">kick</option>
+      //<option value="Ban">ban</option>
+      //<option value="time">timeOut</option>
+
+      function copyCode(){
+
+        // I stole this code
+
+        var copyText = document.getElementById("Code");
+
+        copyText.select();
+        copyText.setSelectionRange(999, 99999); // For mobile devices
+
+        navigator.clipboard.writeText(copyText.value);
+
+        alert("Code Copied to ClipBoard");
+      }
+
+
+
+      document.getElementById("Addinput").addEventListener("submit", function(event){
+        event.preventDefault()
+      });
+
+
+
+      document.getElementById("CommandType").addEventListener("change", function(event){
+        
+        Comtype = document.getElementById("CommandType").value;
+
+        if(Comtype == "" || Comtype == "nothing else needed"){
+          document.getElementById("RepType").disabled = true;
+          document.getElementById("replyInput").disabled = true;
+          document.getElementById("comInput").disabled = true;
+        }else if(Comtype == "bot replys to any message"){
+          document.getElementById("RepType").disabled = false;
+          document.getElementById("replyInput").disabled = false;
+          document.getElementById("comInput").disabled = true;
+        }else{
+          document.getElementById("RepType").disabled = false;
+          document.getElementById("replyInput").disabled = false;
+          document.getElementById("comInput").disabled = false;
+        }
+        document.getElementById("comInput").placeholder = Comtype;
+      });
+
+      document.getElementById("RepType").addEventListener("change", function(event){
+        
+        Reptype = document.getElementById("RepType").value;
+
+        if(Reptype == "nothing needed"){
+          document.getElementById("replyInput").disabled = true;
+        }else{
+          document.getElementById("replyInput").disabled = false;        
+        }
+        document.getElementById("replyInput").placeholder = Reptype;
+      });
+
+
+
+      document.getElementById("CommandType2").addEventListener("change", function(event){
+        
+        Comtype2 = document.getElementById("CommandType2").value;
+
+        if(Comtype2 == "" || Comtype2 == "nothing else needed"){
+          document.getElementById("RepType2").disabled = true;
+          document.getElementById("replyInput2").disabled = true;
+          document.getElementById("comInput2").disabled = true;
+        }else if(Comtype2 == ""){
+          document.getElementById("RepType2").disabled = true;
+          document.getElementById("replyInput2").disabled = true;
+          document.getElementById("comInput2").disabled = true;
+        }else if(Comtype2 == "Else"){
+          document.getElementById("comInput2").disabled = true;
+        }else{
+          document.getElementById("RepType2").disabled = false;
+          document.getElementById("replyInput2").disabled = false;
+          document.getElementById("comInput2").disabled = false;
+          document.getElementById("reply2").disabled = false;
+        }
+        document.getElementById("comInput2").placeholder = Comtype2;
+      });
+
+      document.getElementById("RepType2").addEventListener("change", function(event){
+        
+        Reptype2 = document.getElementById("RepType2").value;
+
+        if(Reptype2 == "nothing needed"){
+          document.getElementById("replyInput2").disabled = true;
+        }else{
+          document.getElementById("replyInput2").disabled = false;        
+        }
+        document.getElementById("replyInput2").placeholder = Reptype2;
+      });
+
+    </script>
+  </div>
+</html>
