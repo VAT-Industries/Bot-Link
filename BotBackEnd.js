@@ -670,5 +670,5 @@ function editKey(){
 
     BotKey = inputKey;
 
-    document.getElementById('KeyDisplay').textContent = "Bot Key:" + BotKey;
+    document.getElementById('KeyDisplay').textContent = "Bot token:" + BotKey;
 }
