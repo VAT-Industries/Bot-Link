@@ -32,6 +32,23 @@ function setCommandtype(){
     ComType2 = document.getElementById("CommandType2").value;
 }
 
+function edit(){
+    if(document.getElementById("PrevSelect").value == "Prev1"){
+        ComText = document.getElementById("UserPrevText").value
+        replyText = document.getElementById("BotPrevText").value
+
+        document.getElementById('comInput').value = document.getElementById("UserPrevText").value
+        document.getElementById("replyInput").value = document.getElementById("BotPrevText").value
+
+    }else if(document.getElementById("PrevSelect").value == "Prev2"){
+        ComText2 = document.getElementById("UserPrevText").value
+        replyText2 = document.getElementById("BotPrevText").value
+
+        document.getElementById('comInput2').value = document.getElementById("UserPrevText").value
+        document.getElementById("replyInput2").value = document.getElementById("BotPrevText").value
+    }
+}
+
 
 function compileCode(){
 
